@@ -163,6 +163,12 @@ describe("moji.cores", () => {
             "ＡＢＣＤ０１２３４あいうアイウABCD 01234ｱｲｳ");
     });
 
+    it("reject hyphen", () => {
+        assert.strictEqual(
+            moji("ＡＢＣＤ　０１２３４‐あいう‑アイウ–ABC—D 0―1−2ｰ34ーｱｲｳ").reject('HY').toString(),
+            "ＡＢＣＤ　０１２３４あいうアイウABCD 01234ｱｲｳ");
+    });
+
     it("addMojisyu", () => {
         const o = {
             "ADD": {start:0xff01, end:0xff5e},

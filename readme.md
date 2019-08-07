@@ -141,6 +141,13 @@ moji("abcあいうアイウ123").reject("HG").toString();
 // => abcアイウ123
 ```
 
+#### 特殊ハイフン削除
+`reject("HY")`
+
+```javascript
+moji("a―b‐c‑あ–い—うｰアーイウ123").reject("HY").toString();
+// => abcあいうアイウ123
+```
 ---
 
 文字種
