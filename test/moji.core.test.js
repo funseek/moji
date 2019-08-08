@@ -165,7 +165,7 @@ describe("moji.cores", () => {
 
     it("reject hyphen", () => {
         assert.strictEqual(
-            moji("ＡＢＣＤ　０１２３４‐あいう‑アイウ–ABC—D 0―1−2ｰ34ーｱｲｳ").reject('HY').toString(),
+            moji("ＡＢＣＤ　０１２３４‐あいう‑アイウ–ABC—D 0―1−2ｰ34ーｱｲ-ｳ").reject('HY').toString(),
             "ＡＢＣＤ　０１２３４あいうアイウABCD 01234ｱｲｳ");
     });
 
